@@ -2,16 +2,16 @@
 
 namespace TiendaSaludable.Modelos
 {
-    public class Cliente
+    public class Productos
     {
         public int ID { get; set; }
         [Required]
         public string Nombre { get; set; }
         [Required]
-        public string Apellido { get; set; }
+        public decimal Precio { get; set; }
         [Required]
-        public string Email { get; set; }
+        public string Descripcion { get; set; }
         [Required]
-        public string Telefono { get; set; }
+        public int Stock { get; set; }
     }
 }
