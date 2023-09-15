@@ -32,16 +32,118 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+            <!-- Aquí se inserta el contenido de la vista -->
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - Tienda_saludable - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
+    <!-- Aquí se inserta la parte del archivo "_layout.cshtml" -->
+    <!-- Inicio del primer fragmento -->
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo">logo</a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="menu">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Registro</a></li>
+                    <li><a href="#">Compras</a></li>
+                    <li><a href="#">Productos</a></li>
+                </ul>
+            </nav>
 
+            <div>
+                <ul>
+                    <li class="submenu">
+                        <img src="images/car.svg" id="img-carrito" alt="carrito">
+                        <div id="carrito">
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>IMAGEN</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-content container">
+            <div class="header-txt">
+                <samp>Ofertas</samp>
+                <h1>Frutas y Verduras</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Inventore dolorum unde nesciunt ipsam quasi illum. Eveniet,
+                    nam voluptas minus culpa quae et unde! Possimus laborum
+                    aspernatur tempore unde id maiores.
+                </p>
+                <a href="#" class="btn-1">Informacion</a>
+            </div>
+            <div class="header-img">
+                <img src="images/rigth.png" alt="">
+            </div>
+        </div>
+    </header>
+    <!-- Fin del primer fragmento -->
+    <!-- Inicio del segundo fragmento -->
+    <section class="informacion container">
+        <div class="informacion-content">
+            <div class="informacion-1">
+                <img src="images/i1.svg" alt="">
+                <h3>Informacion 01</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, recusandae facere! Dolor omnis sequi hic autem, eius necessitatibus. Blanditiis provident voluptatum, ex unde placeat nam mollitia minus praesentium delectus animi.</p>
+            </div>
+        </div>
+        <div class="informacion-content">
+            <div class="informacion-1">
+                <img src="images/i2.svg" alt="">
+                <h3>Informacion 02</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, recusandae facere! Dolor omnis sequi hic autem, eius necessitatibus. Blanditiis provident voluptatum, ex unde placeat nam mollitia minus praesentium delectus animi.</p>
+            </div>
+        </div>
+        <div class="informacion-content">
+            <div class="informacion-1">
+                <img src="images/i3.svg" alt="">
+                <h3>Informacion 03</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, recusandae facere! Dolor omnis sequi hic autem, eius necessitatibus. Blanditiis provident voluptatum, ex unde placeat nam mollitia minus praesentium delectus animi.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="oferts container">
+        <!-- ... contenido de la sección de ofertas de productos ... -->
+    </section>
+
+    <main class="products container" id="lista-1">
+        <!-- ... contenido de la sección de productos ... -->
+    </main>
+
+    <section class="service">
+        <!-- ... contenido de la sección de servicios ... -->
+    </section>
+
+    <section class="contact container">
+        <!-- ... contenido de la sección de contacto ... -->
+    </section>
+
+    <footer class="footer">
+        <!-- ... contenido del pie de página ... -->
+    </footer>
+    <!-- Fin del segundo fragmento -->
+
+    <script src="script.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
