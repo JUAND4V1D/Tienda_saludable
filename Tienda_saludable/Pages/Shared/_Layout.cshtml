@@ -6,15 +6,12 @@
     <title>@ViewData["title"]</title>
     <link rel="stylesheet" href="~/css/site.css">
 </head>
+
 <body>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    @RenderSection("Menu", required: false)
     <header class="header">
         <div class="menu container">
-            <a href="#" class="logo">logo</a>
+            <a asp-page="/Index" class="logo">Frutero</a>
             <input type="checkbox" id="menu">
             <label for="menu">
                 <img src="images/menu.png" class="menu-icono" alt="menu">
@@ -22,11 +19,11 @@
             </label>
             <nav class="navbar">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Registro</a></li>
-                    <li><a href="#">Compras</a></li>
-                    <li><a href="#">Productos</a></li>
+                    <li><a asp-page="/Index">Inicio</a></li>
+                    <li><a asp-page="Privacity">Servicios</a></li>
+                    <li><a asp-page="ClientesSca/Index">Registro</a></li>
+                    <li><a asp-page="VentaSca/Index">Compras</a></li>
+                    <li><a asp-page="ProductoSca/Index">Productos</a></li>
                 </ul>
             </nav>
 
@@ -38,7 +35,7 @@
                             <table id="lista-carrito">
                                 <thead>
                                     <tr>
-                                        <th>IMAGEN</th>
+                                        <th>Imagen</th>
                                         <th>Nombre</th>
                                         <th>Precio</th>
                                         <th></th>
@@ -53,15 +50,21 @@
                 </ul>
             </div>
         </div>
+        <div class="content">
+            @RenderBody()
+        </div>
         <div class="header-content container">
             <div class="header-txt">
                 <span>Ofertas</span>
                 <h1>Frutas y Verduras</h1>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Inventore dolorum unde nesciunt ipsam quasi illum. Eveniet,
-                    nam voluptas minus culpa quae et unde! Possimus laborum
-                    aspernatur tempore unde id maiores.
+                    En nuestra tienda de productos saludables, nos enorgullece ofrecer una amplia
+                    selecci�n de alimentos nutritivos y opciones de bienestar. Nuestros productos
+                    incluyen una variedad de frutas y verduras frescas y org�nicas, as� como productos
+                    integrales y suplementos que respaldan un estilo de vida saludable. Creemos en la
+                    importancia de elegir alimentos que nutran tu cuerpo y mente, y estamos comprometidos
+                    a ayudarte a tomar decisiones saludables. Explora nuestra tienda y descubre todo lo
+                    que tenemos para ofrecerte en tu viaje hacia una vida m�s saludable.
                 </p>
                 <a href="#" class="btn-1">Informacion</a>
             </div>
@@ -70,13 +73,15 @@
             </div>
         </div>
     </header>
+   
+
     <!--SECCION DE INFO-->
     <section class="information container">
 
     <div class="information-content">
         <div class="information-1">
             <img src="images/i1.svg" alt="">
-            <h3>Lorem ipsun</h3>
+            <h3>Sucursales</h3>
             <p>Este es un parrafo de prueba</p>
         </div>
         <div class="information-1">
@@ -263,3 +268,4 @@
 
     <script src="script.js"></script>
 </body>
+</html>
