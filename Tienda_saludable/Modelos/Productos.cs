@@ -14,4 +14,6 @@ namespace TiendaSaludable.Modelos
         [Required]
         public int Stock { get; set; }
     }
+
+
 }

@@ -5,12 +5,11 @@ namespace TiendaSaludable.Modelos
     public class Venta
     {
         public int ID { get; set; }
-        public int ClienteID { get; set; } // Referencia al cliente que realizó la compra
-        [Required]
+        public int ClienteID { get; set; }
+        public Cliente Cliente { get; set; }
         public DateTime FechaVenta { get; set; }
-        [Required]
-        public List<Productos> Productos { get; set; } // Lista de productos vendidos en esta venta
-        [Required]
+        public List<Productos> Productos { get; set; }
         public decimal TotalVenta { get; set; }
     }
+
 }
