@@ -7,14 +7,9 @@ Bienvenido a la Tienda Virtual de Productos Saludables. Este proyecto tiene como
 
 Este proyecto está siendo desarrollado por un equipo comprometido con la promoción de un estilo de vida saludable y accesible para todos. A continuación, te presentamos a los miembros del equipo:
 
-# update_progress.py
-
-team_progress:
-  "VICTOR MANUEL CRUZ JOANIQUINA": 50%
-  "CONRADO GROVER VELIZ VASQUEZ": 75%
-  "JUAN DAVID CONDORI CARI": 60%
-  # Agrega aquí a todos los miembros de tu equipo y sus respectivos porcentajes de trabajo.
-
+1. **VICTOR MANUEL CRUZ JOANIQUINA**
+2. **CONRADO GROVER VELIZ VASQUEZ**
+3. **JUAN DAVID CONDORI CARI**
    
    ## Informe
 
@@ -34,6 +29,8 @@ El sistema cuenta con los siguientes requerimientos funcionales:
 
    - **Descripción:** Permite registrar usuarios para luego añadirlos a la base de datos.
 
+## Capturas del sistema
+![Mi Imagen](images/mi_imagen.png)
 
 ## Cómo Contribuir
 
