@@ -10,6 +10,20 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+<form method="get">
+    <p>
+        <select asp-for="NombreProducto" asp-items="Model.Nombre">
+            <option value="">All</option>
+            <option value="InStock">Cantidad en stock</option>
+            <option value="Search_verdura">Verdura</option>
+            <option value="Searc_Fruta">Fruta</option>
+        </select>
+        Title: <input type="text" asp-for="SearchString" />
+        @*Price: <input type="number" asp-for="Preco" />*@
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
 <table class="table">
     <thead>
         <tr>

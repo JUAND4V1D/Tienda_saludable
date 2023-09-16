@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using TiendaSaludable.Modelos;
 using Tienda_saludable.Data;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Tienda_saludable.Pages.ClientesSca
 {
@@ -19,14 +20,34 @@ namespace Tienda_saludable.Pages.ClientesSca
             _context = context;
         }
 
-        public IList<Cliente> Cliente { get;set; } = default!;
+        public IList<Cliente> Cliente { get; set; } = default!;
+        [BindProperty(SupportsGet = true)]
+        public string? SearchString { get; set; }
+        public SelectList Email { get; set; }
+        public SelectList? Nombre { get; set; }
+        [BindProperty(SupportsGet = true)]
+        public string? ClienteNombre { get; set; }
 
         public async Task OnGetAsync()
         {
-            if (_context.Cliente != null)
+            IQueryable<string> genreQuery = from m in _context.Cliente
+                                            orderby m.Email
+                                            select m.Email;
+            var clientes = from m in _context.Cliente
+                           select m;
+            if (!string.IsNullOrEmpty(SearchString))
             {
-                Cliente = await _context.Cliente.ToListAsync();
+                clientes = clientes.Where(s => s.Nombre.Contains(SearchString));
             }
+
+            if (!string.IsNullOrEmpty(ClienteNombre))
+            {
+                clientes = clientes.Where(x => x.Email == ClienteNombre);
+            }
+            Email = new SelectList(await genreQuery.Distinct().ToListAsync());
+
+            Cliente = await clientes.ToListAsync();
+
         }
     }
 }

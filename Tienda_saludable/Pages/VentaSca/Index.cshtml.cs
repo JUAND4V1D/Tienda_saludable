@@ -19,15 +19,27 @@ namespace Tienda_saludable.Pages.VentaSca
             _context = context;
         }
 
-        public IList<Venta> Venta { get;set; } = default!;
+        public IList<Venta> Venta { get; set; } = default!;
+
+        [BindProperty(SupportsGet = true)]
+        public string SearchString { get; set; }
 
         public async Task OnGetAsync()
         {
-            if (_context.Venta != null)
+            var ventasQuery = _context.Venta
+                .Include(v => v.Cliente)
+                .Include(v => v.Productos)
+                .AsQueryable();
+
+            
+
+            if (!string.IsNullOrEmpty(SearchString))
             {
-                Venta = await _context.Venta
-                .Include(v => v.Cliente).ToListAsync();
+                ventasQuery = ventasQuery.Where(v => v.Productos.Any(p => p.Nombre.Contains(SearchString)));
             }
+
+            Venta = await ventasQuery.ToListAsync();
         }
     }
 }
+
