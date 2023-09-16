@@ -7,7 +7,7 @@ Bienvenido a la Tienda Virtual de Productos Saludables. Este proyecto tiene como
 
 Este proyecto está siendo desarrollado por un equipo comprometido con la promoción de un estilo de vida saludable y accesible para todos. A continuación, te presentamos a los miembros del equipo:
 
-# progress.yml
+# update_progress.yml
 
 team_progress:
   "VICTOR MANUEL CRUZ JOANIQUINA": 50%
