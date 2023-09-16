@@ -5,7 +5,7 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Ingresar Productos</h1>
 
 <h4>Productos</h4>
 <hr />
@@ -20,7 +20,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Productos.Precio" class="control-label"></label>
-                <input asp-for="Productos.Precio" class="form-control" />
+                <input asp-for="Productos.Precio" class="form-control" type="number"/>
                 <span asp-validation-for="Productos.Precio" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -41,7 +41,7 @@
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="Index">Regresar A La Lista</a>
 </div>
 
 @section Scripts {
