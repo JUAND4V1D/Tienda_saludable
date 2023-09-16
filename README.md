@@ -43,4 +43,4 @@ Si deseas contribuir a este proyecto, sigue estos pasos:
 2. Clona el repositorio en tu máquina local:
 
    ```bash
-   git clone https://github.com/TU_NOMBRE_DE_USUARIO/Tienda-Virtual-Productos-Saludables.git
+   git clone https://github.com/JUAND4V1D/Tienda-Virtual-Productos-Saludables.git
