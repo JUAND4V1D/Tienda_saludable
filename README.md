@@ -30,7 +30,9 @@ El sistema cuenta con los siguientes requerimientos funcionales:
    - **Descripción:** Permite registrar usuarios para luego añadirlos a la base de datos.
 
 ## Capturas del sistema
-![Mi Imagen](images/mi_imagen.png)
+![Mi Imagen](img_uno.png)
+![Mi Imagen](img_dos.png)
+![Mi Imagen](img_tres.png)
 
 ## Cómo Contribuir
 
