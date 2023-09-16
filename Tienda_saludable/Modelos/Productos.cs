@@ -4,6 +4,7 @@ namespace TiendaSaludable.Modelos
 {
     public class Productos
     {
+        //CREACION DE LOS ATRIBUTOS 
         public int ID { get; set; }
         [Required]
         public string Nombre { get; set; }
